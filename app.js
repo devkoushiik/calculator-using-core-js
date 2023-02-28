@@ -100,7 +100,6 @@ const calculator = new Calculator(
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    navigator.vibrate(200);
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
   });
@@ -108,26 +107,21 @@ numberButtons.forEach((button) => {
 
 operationButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    navigator.vibrate(200);
     calculator.chooseOperatoin(button.innerText);
-    console.log(button.innerText);
     calculator.updateDisplay();
   });
 });
 
 equalButtton.addEventListener("click", (button) => {
-  navigator.vibrate(200);
   calculator.compute();
   calculator.updateDisplay();
 });
 
 allClearButtton.addEventListener("click", (button) => {
-  navigator.vibrate(200);
   calculator.clear();
   calculator.updateDisplay();
 });
 deleteButtton.addEventListener("click", (button) => {
-  navigator.vibrate(200);
   calculator.delete();
   calculator.updateDisplay();
 });
